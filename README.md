@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TektonX Labs - Mentorship Platform
+
+A modern web application for TektonX Labs, a non-profit organization dedicated to mentoring young Africans in technology.
+
+## Features
+
+### Landing Page
+- Modern, minimalistic design with TektonX brand colors
+- About section highlighting vision, mission, and values
+- Programs overview
+- Learning tracks display
+- Contact form
+
+### Mentorship Platform
+- **User Authentication**: Sign up and login for mentors and mentees
+- **Role-based Dashboards**:
+  - **Mentee Dashboard**: Track progress, view assignments, submit work
+  - **Mentor Dashboard**: View mentees, provide feedback, manage assignments
+  - **Admin Dashboard**: Manage users, programs, and platform-wide settings
+
+### Learning Tracks (7 Tracks)
+1. Software Development (Frontend & Backend)
+2. UI/UX Design
+3. Mobile App Development
+4. Product/Project Management
+5. Quality Assurance (QA)
+6. Data Analysis/Science
+7. Cybersecurity
+
+Each track includes:
+- 3 milestones over 12 weeks
+- Weekly tasks with resources
+- Progress tracking
+- Mentor feedback system
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Authentication**: NextAuth.js
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd claude-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.local.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+### Demo Accounts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Use password: `demo123` for all demo accounts:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Role | Email |
+|------|-------|
+| Admin | admin@tektonxlabs.org |
+| Mentor | mentor.dev@tektonxlabs.org |
+| Mentee | mentee1@example.com |
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── (auth)/            # Authentication pages
+│   ├── (dashboard)/       # Dashboard pages
+│   └── api/               # API routes
+├── components/
+│   ├── ui/                # Reusable UI components
+│   ├── layout/            # Layout components
+│   ├── landing/           # Landing page sections
+│   ├── dashboard/         # Dashboard components
+│   └── providers/         # Context providers
+├── data/                  # Static data (tracks, etc.)
+├── lib/                   # Utility functions
+└── types/                 # TypeScript types
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Brand Colors
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Deep Purple | #670EB3 | Primary brand color |
+| Electric Purple | #A41AFF | Accents, gradients |
+| Light Green | #BFEE7F | Success states |
+| Teal | #59D6E6 | Secondary accents |
+| Yellow | #FFD761 | Warnings, highlights |
+| Deep Blue | #002BA1 | Alternative accent |
+
+## Deployment
+
+The application can be deployed to:
+- Vercel (recommended)
+- Netlify
+- Any Node.js hosting platform
+
+## Adding Your Logo
+
+Replace the placeholder logo files in `public/images/`:
+- `logo.png` - Main logo for light backgrounds
+- `logo-white.png` - White version for dark backgrounds
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is for TektonX Labs - a non-profit organization.
+
+---
+
+**TektonX Labs** - Building People. Building Products. Building Africa.
