@@ -27,8 +27,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Bebas Neue", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-bebas)", "sans-serif"],
       },
       backgroundImage: {
         "gradient-brand": "linear-gradient(135deg, #670EB3 0%, #A41AFF 100%)",
