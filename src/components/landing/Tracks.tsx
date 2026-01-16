@@ -22,154 +22,139 @@ const tracks = [
     name: "Software Development",
     description: "Frontend & Backend web development",
     skills: ["HTML/CSS", "JavaScript", "Node.js", "APIs"],
-    gradient: "from-purple-deep to-purple-electric",
-    bgGradient: "from-purple-100 to-purple-50",
-    shadow: "shadow-purple-electric/30",
+    color: "#670EB3",
+    bgColor: "#f3e8ff",
   },
   {
     icon: Palette,
     name: "UI/UX Design",
     description: "User interface and experience design",
     skills: ["Design Principles", "Figma", "Prototyping", "User Testing"],
-    gradient: "from-purple-electric to-teal",
-    bgGradient: "from-purple-50 to-teal/10",
-    shadow: "shadow-purple-electric/30",
+    color: "#A41AFF",
+    bgColor: "#fae8ff",
   },
   {
     icon: Smartphone,
     name: "Mobile Development",
     description: "Cross-platform mobile apps",
     skills: ["Flutter/React Native", "UI Components", "State Management"],
-    gradient: "from-teal to-blue-deep",
-    bgGradient: "from-teal/20 to-blue-50",
-    shadow: "shadow-teal/30",
+    color: "#59D6E6",
+    bgColor: "#cffafe",
   },
   {
     icon: LayoutDashboard,
     name: "Product Management",
     description: "Product lifecycle and strategy",
     skills: ["Agile/Scrum", "PRDs", "User Stories", "Case Studies"],
-    gradient: "from-yellow-brand to-green-light",
-    bgGradient: "from-yellow-100 to-yellow-50",
-    shadow: "shadow-yellow-brand/30",
+    color: "#FFD761",
+    bgColor: "#fef9c3",
   },
   {
     icon: ShieldCheck,
     name: "Quality Assurance",
     description: "Software testing and quality",
     skills: ["Test Cases", "Bug Reports", "Automation"],
-    gradient: "from-green-light to-teal",
-    bgGradient: "from-green-100 to-green-50",
-    shadow: "shadow-green-light/30",
+    color: "#BFEE7F",
+    bgColor: "#ecfccb",
   },
   {
     icon: BarChart3,
     name: "Data Analysis",
     description: "Data analysis and visualization",
     skills: ["Excel/SQL", "Python/Pandas", "Visualization"],
-    gradient: "from-blue-deep to-purple-deep",
-    bgGradient: "from-blue-100 to-indigo-50",
-    shadow: "shadow-blue-deep/30",
+    color: "#002BA1",
+    bgColor: "#dbeafe",
   },
   {
     icon: Lock,
     name: "Cybersecurity",
     description: "Security and defense",
     skills: ["Security Basics", "Encryption", "Threat Analysis"],
-    gradient: "from-purple-deep to-blue-deep",
-    bgGradient: "from-purple-100 to-blue-50",
-    shadow: "shadow-purple-deep/30",
+    color: "#670EB3",
+    bgColor: "#ede9fe",
   },
+];
+
+const infoBadges = [
+  { icon: Clock, label: "12 Weeks", color: "#670EB3" },
+  { icon: Target, label: "3 Milestones", color: "#59D6E6" },
+  { icon: Sparkles, label: "Expert Mentors", color: "#FFD761" },
 ];
 
 export default function Tracks() {
   return (
     <section id="tracks" className="py-24 relative overflow-hidden">
-      {/* Colorful gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-white to-teal/10" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-white to-cyan-50/30" />
 
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-deep via-purple-electric via-teal via-yellow-brand to-green-light" />
-      <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-purple-electric/10 to-teal/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-br from-yellow-brand/10 to-green-light/10 rounded-full blur-3xl" />
+      {/* Top accent bar */}
+      <div className="absolute top-0 left-0 w-full h-1" style={{ background: "linear-gradient(90deg, #670EB3, #A41AFF, #59D6E6, #FFD761, #BFEE7F)" }} />
 
-      {/* Animated floating shapes */}
-      <div className="absolute top-40 left-10 w-16 h-16 bg-gradient-to-br from-purple-electric to-teal rounded-xl rotate-12 opacity-10 animate-bounce hidden lg:block" style={{ animationDuration: "4s" }} />
-      <div className="absolute bottom-40 right-10 w-12 h-12 bg-gradient-to-br from-yellow-brand to-green-light rounded-full opacity-10 animate-bounce hidden lg:block" style={{ animationDuration: "3s", animationDelay: "1s" }} />
-      <div className="absolute top-1/2 right-20 w-10 h-10 bg-gradient-to-br from-blue-deep to-purple-deep rounded-lg rotate-45 opacity-10 animate-bounce hidden lg:block" style={{ animationDuration: "5s", animationDelay: "2s" }} />
+      {/* Decorative blobs */}
+      <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full blur-3xl" style={{ background: "radial-gradient(circle, rgba(164,26,255,0.1) 0%, rgba(89,214,230,0.1) 100%)" }} />
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full blur-3xl" style={{ background: "radial-gradient(circle, rgba(255,215,97,0.1) 0%, rgba(191,238,127,0.1) 100%)" }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-brand/10 to-green-light/10 px-4 py-2 rounded-full mb-4 border border-yellow-brand/20">
-            <Sparkles className="w-4 h-4 text-yellow-brand" />
-            <span className="text-yellow-700 font-semibold text-sm uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-yellow-200">
+            <Sparkles className="w-4 h-4" style={{ color: "#FFD761" }} />
+            <span className="font-semibold text-sm uppercase tracking-wider" style={{ color: "#d97706" }}>
               Learning Paths
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             <span className="text-gray-900">Choose Your </span>
-            <span className="bg-gradient-to-r from-purple-deep via-purple-electric to-teal bg-clip-text text-transparent">Track</span>
+            <span style={{ color: "#A41AFF" }}>Track</span>
           </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed">
             Our{" "}
-            <span className="text-purple-deep font-semibold">3-month</span> mentorship program offers{" "}
-            <span className="text-purple-electric font-semibold">7 specialized tracks</span>. Each track has
+            <span className="font-semibold" style={{ color: "#670EB3" }}>3-month</span> mentorship program offers{" "}
+            <span className="font-semibold" style={{ color: "#A41AFF" }}>7 specialized tracks</span>. Each track has
             3 milestones with weekly tasks and mentor guidance.
           </p>
 
-          {/* Quick info badges */}
+          {/* Info badges */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-purple-electric/10">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-deep to-purple-electric flex items-center justify-center">
-                <Clock className="w-4 h-4 text-white" />
+            {infoBadges.map((badge) => (
+              <div key={badge.label} className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-100">
+                <div
+                  className="w-8 h-8 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: badge.color }}
+                >
+                  <badge.icon className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-sm font-medium text-gray-700">{badge.label}</span>
               </div>
-              <span className="text-sm font-medium text-gray-700">12 Weeks</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-teal/10">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal to-blue-deep flex items-center justify-center">
-                <Target className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm font-medium text-gray-700">3 Milestones</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md border border-yellow-brand/10">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-brand to-green-light flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm font-medium text-gray-700">Expert Mentors</span>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Tracks Grid with colorful cards */}
+        {/* Tracks Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {tracks.map((track, index) => (
             <div
               key={track.name}
-              className={`group relative bg-gradient-to-br ${track.bgGradient} rounded-3xl p-6 border-2 border-white/50 shadow-lg ${track.shadow} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative rounded-3xl p-6 border-2 border-white/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+              style={{ backgroundColor: track.bgColor, animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${track.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-
-              {/* Icon with animated glow */}
+              {/* Icon */}
               <div className="relative mb-4">
                 <div
-                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${track.gradient} flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg ${track.shadow}`}
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg"
+                  style={{ backgroundColor: track.color }}
                 >
                   <track.icon className="w-7 h-7 text-white" />
                 </div>
-                {/* Glow effect */}
-                <div className={`absolute inset-0 w-14 h-14 rounded-2xl bg-gradient-to-br ${track.gradient} opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300`} />
               </div>
 
               {/* Content */}
-              <h3 className={`text-lg font-bold mb-2 bg-gradient-to-r ${track.gradient} bg-clip-text text-transparent`}>
+              <h3 className="text-lg font-bold mb-2" style={{ color: track.color }}>
                 {track.name}
               </h3>
               <p className="text-sm text-gray-600 mb-4 leading-relaxed">{track.description}</p>
 
-              {/* Skills with colorful tags */}
+              {/* Skills */}
               <div className="flex flex-wrap gap-2">
                 {track.skills.map((skill) => (
                   <span
@@ -181,23 +166,26 @@ export default function Tracks() {
                 ))}
               </div>
 
-              {/* Bottom gradient line */}
-              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${track.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
+              {/* Bottom accent */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+                style={{ backgroundColor: track.color }}
+              />
             </div>
           ))}
         </div>
 
-        {/* CTA with colorful styling */}
+        {/* CTA */}
         <div className="text-center mt-16">
           <Link href="/signup">
-            <Button size="lg" className="group shadow-xl shadow-purple-electric/25 hover:shadow-2xl hover:shadow-purple-electric/40 transition-all duration-300">
+            <Button size="lg" className="group shadow-xl hover:shadow-2xl transition-all duration-300">
               <Sparkles className="mr-2 w-5 h-5" />
               Start Your Journey
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
           <p className="mt-4 text-sm text-gray-500">
-            Join <span className="text-purple-electric font-semibold">500+</span> builders already on the platform
+            Join <span className="font-semibold" style={{ color: "#A41AFF" }}>500+</span> builders already on the platform
           </p>
         </div>
       </div>
